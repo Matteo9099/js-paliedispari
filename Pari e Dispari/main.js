@@ -1,20 +1,11 @@
 // far scegliere se pari o dispari all'utente
 let scelta_pari_dispari = prompt('Pari o Dispari?');
 
-if(scelta_pari_dispari != "pari".toLowerCase || scelta_pari_dispari != "dispari".toLowerCase){
-    scelta_pari_dispari = prompt('Inserisci se si vuole giocare con pari o  dispari');
-}
-
-/* proposta while
 let i = 0;
-while(scelta_pari_dispari != "pari".toLowerCase || scelta_pari_dispari != "dispari".toLowerCase){
+while(scelta_pari_dispari != "pari" && scelta_pari_dispari != "dispari"){
     scelta_pari_dispari = prompt('Inserisci se si vuole giocare con pari o  dispari');
     i++;
 }
-
-
-*/
-
 console.log('Hai scelto ' + scelta_pari_dispari);
 
 
