@@ -5,6 +5,16 @@ if(scelta_pari_dispari != "pari".toLowerCase || scelta_pari_dispari != "dispari"
     scelta_pari_dispari = prompt('Inserisci se si vuole giocare con pari o  dispari');
 }
 
+/* proposta while
+let i = 0;
+while(scelta_pari_dispari != "pari".toLowerCase || scelta_pari_dispari != "dispari".toLowerCase){
+    scelta_pari_dispari = prompt('Inserisci se si vuole giocare con pari o  dispari');
+    i++;
+}
+
+
+*/
+
 console.log('Hai scelto ' + scelta_pari_dispari);
 
 
