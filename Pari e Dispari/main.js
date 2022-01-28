@@ -1,19 +1,20 @@
 // far scegliere se pari o dispari all'utente
 let scelta_pari_dispari = prompt('Pari o Dispari?');
-if(scelta_pari_dispari == 'pari'){
-    console.log('Hai scelto ' +scelta_pari_dispari);
-}else{
-    alert('Inserire un valore che sia PARI o DISPARI.');
+
+if(scelta_pari_dispari != "pari".toLowerCase || scelta_pari_dispari != "dispari".toLowerCase){
+    scelta_pari_dispari = prompt('Inserisci se si vuole giocare con pari o  dispari');
 }
+
+console.log('Hai scelto ' + scelta_pari_dispari);
 
 
 // far scegliere un numero da 1 a 5 all'utente
 let scelta_numero = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
-let i = 0;
+let j = 0;
 while(scelta_numero >=6 || scelta_numero <=0 || isNaN(scelta_numero)){
    scelta_numero= parseInt(prompt('Inserisci un numero valido da 1 a 5'));
-    i++;
+    j++;
 }
 console.log('Hai scelto il numero ' + scelta_numero);
 
@@ -31,7 +32,7 @@ console.log('Somma due numeri ' + somma(scelta_numero, numero_bot));
 // se la somma è = a quella indicata dall'utente vince utente, altrimenti vince il computer
 pariDispari();
 console.log('Il risultato è ' + pariDispari(somma))
-alert('Ha vinto ' + pariDispari(somma));
+alert('Vince: ' + pariDispari(somma));
 
 
 // inizializzo una funzione per generare un numero casuale compreso tra 1 e 5
