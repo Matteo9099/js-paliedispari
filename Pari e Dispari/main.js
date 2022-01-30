@@ -31,9 +31,14 @@ console.log('Somma due numeri ' + somma(scelta_numero, numero_bot));
 
 
 // se la somma è = a quella indicata dall'utente vince utente, altrimenti vince il computer
-pariDispari();
-console.log('Il risultato è ' + pariDispari(somma))
-alert('Vince: ' + pariDispari(somma));
+pariDispari(somma());
+console.log('Il risultato è ' + pariDispari(somma(scelta_numero, numero_bot)));
+
+if(scelta_pari_dispari == pariDispari(somma(scelta_numero, numero_bot))){
+    alert('Hai vinto! somma due numeri è ' + pariDispari(scelta_numero, numero_bot))
+} else{
+    alert('Hai perso! somma due numeri è ' + pariDispari(scelta_numero, numero_bot))
+}
 
 
 // inizializzo una funzione per generare un numero casuale compreso tra 1 e 5
@@ -50,14 +55,10 @@ function randomNumber_1_5(){
 
 
 // inizializzo una funziona che calcoli se il numero è pari o dispari
-function pariDispari(n){
-    let ritorno;
-
-    if(n % 2 == 0){
-        ritorno = 'pari';
+function pariDispari(valore){
+    if(valore % 2 == 0){
+        return 'pari';
     } else{
-        ritorno = 'dispari';
+        return 'dispari';
     }
-
-    return ritorno;
 }
